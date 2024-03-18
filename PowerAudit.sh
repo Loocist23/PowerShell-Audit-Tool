@@ -247,10 +247,10 @@ export_files() {
 export_to_csv() {
     local csv_file="$outputFolderName/system_info.csv"
     
-    # Ajout des en-têtes CSV pour les nouvelles informations
+    # Adding CSV header to these informations
     echo "Username,Administrator,Model,Manufacturer,S/N,BIOS Version,Computer name,CPU Model,CPU Cores,CPU Threads per Core,CPU Max Speed,CPU Min Speed,CPU Architecture,GPU,GPU Driver Version,GPU Driver Date,RAM Manufacturer,Total RAM Amount,RAM Speed,RAM Slot,RAM Channel,Disks Type,Disks Model,Disks Health,Disks Partitions,Domain,IP Address,Gateway,DNS,DHCP,Printers,BitLocker Encryption,Office Version,Initial Install Date,Scan Date,Scan ID" > "$csv_file"
     
-    # Ajout des nouvelles informations aux données à exporter
+    # Adding these informations to the data to be exported
     echo "\"$global_username\",\"$global_is_admin\",\"$global_model\",\"$global_manufacturer\",\"$global_serial_number\",\"$global_bios_version\",\"$global_computer_name\",\"$global_cpu_model\",\"$global_cpu_cores\",\"$global_cpu_threads_per_core\",\"$global_cpu_max_speed\",\"$global_cpu_min_speed\",\"$global_cpu_architecture\",\"$global_gpu\",\"$global_gpu_driver_version\",\"$global_gpu_driver_date\",\"$global_ram_manufacturer\",\"$global_total_ram_amount\",\"$global_ram_speed\",\"$global_ram_slot\",\"$global_ram_channel\",\"$global_disks_type\",\"$global_disks_model\",\"$global_disks_health\",\"$global_disks_partitions\",\"$global_domain\",\"$global_ipaddress\",\"$global_gateway\",\"$global_dns\",\"$global_dhcp\",\"$global_printers\",\"$global_bitlocker_encryption\",\"$global_office_version\",\"$global_initial_install_date\",\"$global_scan_date\",\"$global_scan_id\"" >> "$csv_file"
 }
 
